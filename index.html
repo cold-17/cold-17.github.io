@@ -23,23 +23,18 @@
         </div>
     </div>
 
-    <!-- Scroll progress indicator -->
-    <div class="scroll-progress">
-        <div class="scroll-progress-bar"></div>
-    </div>
-
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <span class="logo-text glitch" data-text="CO">&lt;CO/&gt;</span>
+                <span class="logo-text">&lt;Charlie/&gt;</span>
             </div>
             <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link" data-text="Home">Home</a>
-                <a href="#about" class="nav-link" data-text="About">About</a>
-                <a href="#skills" class="nav-link" data-text="Skills">Skills</a>
-                <a href="#projects" class="nav-link" data-text="Projects">Projects</a>
-                <a href="#contact" class="nav-link" data-text="Contact">Contact</a>
+                <button class="nav-btn active" data-section="home">Home</button>
+                <button class="nav-btn" data-section="about">About</button>
+                <button class="nav-btn" data-section="skills">Skills</button>
+                <button class="nav-btn" data-section="projects">Projects</button>
+                <button class="nav-btn" data-section="contact">Contact</button>
             </div>
             <div class="nav-toggle" id="nav-toggle">
                 <span></span>
@@ -54,9 +49,10 @@
         </div>
     </nav>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero">
+    <!-- Main Content Container -->
+    <main class="main-container">
+        <!-- Home Section -->
+        <section id="home" class="section active">
             <div class="hero-background">
                 <div class="gradient-bg"></div>
                 <div class="floating-shapes">
@@ -82,14 +78,14 @@
                         Let's build something amazing together.
                     </p>
                     <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">
+                        <button class="btn btn-primary" data-section="projects">
                             <span>View My Work</span>
                             <i class="fas fa-arrow-right"></i>
-                        </a>
-                        <a href="#contact" class="btn btn-secondary">
+                        </button>
+                        <button class="btn btn-secondary" data-section="contact">
                             <span>Let's Connect</span>
                             <i class="fas fa-paper-plane"></i>
-                        </a>
+                        </button>
                     </div>
                 </div>
                 
@@ -115,175 +111,143 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="scroll-indicator">
-                <div class="mouse">
-                    <div class="wheel"></div>
-                </div>
-                <span>Scroll Down</span>
-            </div>
         </section>
 
         <!-- About Section -->
-        <section id="about" class="about">
-            <div class="container">
+        <section id="about" class="section">
+            <div class="section-container">
                 <div class="section-header">
-                    <span class="section-number">01</span>
                     <h2 class="section-title">About Me</h2>
                     <div class="title-underline"></div>
                 </div>
                 
-                <div class="about-content">
-                    <div class="about-text">
-                        <div class="text-reveal">
-                            <p>
-                                Hello! I'm Charlie, a passionate developer on an exciting journey into the world of 
-                                full-stack development. What started as curiosity has evolved into a genuine love 
-                                for creating digital solutions that make a difference.
-                            </p>
-                            <p>
-                                I believe in learning by doing, which is why you'll find me constantly building, 
-                                experimenting, and pushing the boundaries of what I can create. Every line of code 
-                                is an opportunity to learn something new.
-                            </p>
-                            <p>
-                                When I'm not coding, you'll find me exploring new technologies, contributing to 
-                                open source projects, or sharing my learning journey with the developer community.
-                            </p>
+                <div class="about-grid">
+                    <div class="about-card glass-card">
+                        <div class="card-icon">
+                            <i class="fas fa-user-graduate"></i>
                         </div>
-                        
-                        <div class="about-stats">
-                            <div class="stat-item">
-                                <span class="stat-number" data-target="100">0</span>
-                                <span class="stat-label">Hours Coding</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number" data-target="5">0</span>
-                                <span class="stat-label">Projects Built</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number" data-target="10">0</span>
-                                <span class="stat-label">Technologies Learned</span>
-                            </div>
-                        </div>
+                        <h3>Background</h3>
+                        <p>Passionate developer on an exciting journey into full-stack development. I believe in learning by doing and love building creative solutions.</p>
                     </div>
                     
-                    <div class="about-visual">
-                        <div class="profile-card glass-card">
-                            <div class="profile-image">
-                                <div class="image-placeholder">
-                                    <i class="fas fa-user"></i>
-                                </div>
-                                <div class="status-indicator">
-                                    <span class="status-dot"></span>
-                                    <span class="status-text">Available for work</span>
-                                </div>
-                            </div>
+                    <div class="about-card glass-card">
+                        <div class="card-icon">
+                            <i class="fas fa-code"></i>
                         </div>
+                        <h3>Philosophy</h3>
+                        <p>Every line of code is an opportunity to learn something new. I'm constantly experimenting and pushing boundaries.</p>
+                    </div>
+                    
+                    <div class="about-card glass-card">
+                        <div class="card-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Goals</h3>
+                        <p>Building innovative web applications and contributing to the developer community through open source projects.</p>
+                    </div>
+                </div>
+                
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="100">0</span>
+                        <span class="stat-label">Hours Coding</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="5">0</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="10">0</span>
+                        <span class="stat-label">Technologies</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="skills">
-            <div class="container">
+        <section id="skills" class="section">
+            <div class="section-container">
                 <div class="section-header">
-                    <span class="section-number">02</span>
-                    <h2 class="section-title">Skills & Technologies</h2>
+                    <h2 class="section-title">Skills</h2>
                     <div class="title-underline"></div>
                 </div>
                 
-                <div class="skills-content">
-                    <div class="skill-categories">
-                        <div class="skill-category">
-                            <h3><i class="fas fa-code"></i> Frontend</h3>
-                            <div class="skill-items">
-                                <div class="skill-item">
-                                    <div class="skill-info">
-                                        <span class="skill-name">HTML5</span>
-                                        <span class="skill-level">Advanced</span>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" data-progress="85"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <div class="skill-info">
-                                        <span class="skill-name">CSS3</span>
-                                        <span class="skill-level">Advanced</span>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" data-progress="80"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <div class="skill-info">
-                                        <span class="skill-name">JavaScript</span>
-                                        <span class="skill-level">Intermediate</span>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" data-progress="70"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <div class="skill-info">
-                                        <span class="skill-name">React</span>
-                                        <span class="skill-level">Learning</span>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" data-progress="40"></div>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="skills-grid">
+                    <div class="skill-card glass-card" data-skill="html">
+                        <div class="skill-icon">
+                            <i class="fab fa-html5"></i>
                         </div>
-                        
-                        <div class="skill-category">
-                            <h3><i class="fas fa-server"></i> Backend</h3>
-                            <div class="skill-items">
-                                <div class="skill-item">
-                                    <div class="skill-info">
-                                        <span class="skill-name">Node.js</span>
-                                        <span class="skill-level">Learning</span>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" data-progress="35"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <div class="skill-info">
-                                        <span class="skill-name">Express.js</span>
-                                        <span class="skill-level">Learning</span>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" data-progress="30"></div>
-                                    </div>
-                                </div>
+                        <h3>HTML5</h3>
+                        <div class="skill-level">
+                            <div class="level-bar">
+                                <div class="level-fill" data-level="85"></div>
                             </div>
+                            <span class="level-text">Advanced</span>
                         </div>
-                        
-                        <div class="skill-category">
-                            <h3><i class="fas fa-database"></i> Database & Tools</h3>
-                            <div class="skill-items">
-                                <div class="skill-item">
-                                    <div class="skill-info">
-                                        <span class="skill-name">Git</span>
-                                        <span class="skill-level">Intermediate</span>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" data-progress="65"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <div class="skill-info">
-                                        <span class="skill-name">MongoDB</span>
-                                        <span class="skill-level">Learning</span>
-                                    </div>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" data-progress="25"></div>
-                                    </div>
-                                </div>
+                    </div>
+                    
+                    <div class="skill-card glass-card" data-skill="css">
+                        <div class="skill-icon">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <h3>CSS3</h3>
+                        <div class="skill-level">
+                            <div class="level-bar">
+                                <div class="level-fill" data-level="80"></div>
                             </div>
+                            <span class="level-text">Advanced</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card glass-card" data-skill="javascript">
+                        <div class="skill-icon">
+                            <i class="fab fa-js-square"></i>
+                        </div>
+                        <h3>JavaScript</h3>
+                        <div class="skill-level">
+                            <div class="level-bar">
+                                <div class="level-fill" data-level="70"></div>
+                            </div>
+                            <span class="level-text">Intermediate</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card glass-card" data-skill="react">
+                        <div class="skill-icon">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <h3>React</h3>
+                        <div class="skill-level">
+                            <div class="level-bar">
+                                <div class="level-fill" data-level="40"></div>
+                            </div>
+                            <span class="level-text">Learning</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card glass-card" data-skill="node">
+                        <div class="skill-icon">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <h3>Node.js</h3>
+                        <div class="skill-level">
+                            <div class="level-bar">
+                                <div class="level-fill" data-level="35"></div>
+                            </div>
+                            <span class="level-text">Learning</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card glass-card" data-skill="git">
+                        <div class="skill-icon">
+                            <i class="fab fa-git-alt"></i>
+                        </div>
+                        <h3>Git</h3>
+                        <div class="skill-level">
+                            <div class="level-bar">
+                                <div class="level-fill" data-level="65"></div>
+                            </div>
+                            <span class="level-text">Intermediate</span>
                         </div>
                     </div>
                 </div>
@@ -291,146 +255,140 @@
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="projects">
-            <div class="container">
+        <section id="projects" class="section">
+            <div class="section-container">
                 <div class="section-header">
-                    <span class="section-number">03</span>
                     <h2 class="section-title">Featured Projects</h2>
                     <div class="title-underline"></div>
                 </div>
                 
-                <div class="projects-grid">
-                    <div class="project-card glass-card">
-                        <div class="project-image">
-                            <div class="project-placeholder">
-                                <i class="fas fa-code"></i>
-                                <span>Coming Soon</span>
+                <div class="projects-showcase">
+                    <div class="project-slider">
+                        <div class="project-slide active" data-project="0">
+                            <div class="project-preview">
+                                <div class="project-mockup">
+                                    <div class="mockup-header">
+                                        <div class="mockup-controls">
+                                            <span></span><span></span><span></span>
+                                        </div>
+                                    </div>
+                                    <div class="mockup-content">
+                                        <i class="fas fa-code project-icon"></i>
+                                        <span>Todo App</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="project-overlay">
+                            <div class="project-details">
+                                <h3>Todo Application</h3>
+                                <p>Full-stack todo app with user authentication, real-time updates, and modern interface.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">MongoDB</span>
+                                </div>
                                 <div class="project-links">
-                                    <a href="#" class="project-link">
-                                        <i class="fas fa-external-link-alt"></i>
-                                    </a>
-                                    <a href="#" class="project-link">
-                                        <i class="fab fa-github"></i>
-                                    </a>
+                                    <button class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</button>
+                                    <button class="project-link"><i class="fab fa-github"></i> Code</button>
                                 </div>
                             </div>
                         </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Todo App</h3>
-                            <p class="project-description">
-                                A full-stack todo application with user authentication, 
-                                real-time updates, and a beautiful modern interface.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">Node.js</span>
-                                <span class="tech-tag">MongoDB</span>
+                        
+                        <div class="project-slide" data-project="1">
+                            <div class="project-preview">
+                                <div class="project-mockup">
+                                    <div class="mockup-header">
+                                        <div class="mockup-controls">
+                                            <span></span><span></span><span></span>
+                                        </div>
+                                    </div>
+                                    <div class="mockup-content">
+                                        <i class="fas fa-cloud-sun project-icon"></i>
+                                        <span>Weather App</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-details">
+                                <h3>Weather Dashboard</h3>
+                                <p>Interactive weather application with geolocation, forecasts, and data visualizations.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">API</span>
+                                    <span class="tech-tag">Chart.js</span>
+                                </div>
+                                <div class="project-links">
+                                    <button class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</button>
+                                    <button class="project-link"><i class="fab fa-github"></i> Code</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-slide" data-project="2">
+                            <div class="project-preview">
+                                <div class="project-mockup">
+                                    <div class="mockup-header">
+                                        <div class="mockup-controls">
+                                            <span></span><span></span><span></span>
+                                        </div>
+                                    </div>
+                                    <div class="mockup-content">
+                                        <i class="fas fa-shopping-cart project-icon"></i>
+                                        <span>E-commerce</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-details">
+                                <h3>E-commerce Platform</h3>
+                                <p>Full-featured online store with payment integration and admin dashboard.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">Express</span>
+                                    <span class="tech-tag">Stripe</span>
+                                </div>
+                                <div class="project-links">
+                                    <button class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</button>
+                                    <button class="project-link"><i class="fab fa-github"></i> Code</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="project-card glass-card">
-                        <div class="project-image">
-                            <div class="project-placeholder">
-                                <i class="fas fa-cloud-sun"></i>
-                                <span>Coming Soon</span>
-                            </div>
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" class="project-link">
-                                        <i class="fas fa-external-link-alt"></i>
-                                    </a>
-                                    <a href="#" class="project-link">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Weather Dashboard</h3>
-                            <p class="project-description">
-                                Interactive weather application with geolocation, 
-                                forecasts, and beautiful data visualizations.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">API</span>
-                                <span class="tech-tag">Chart.js</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card glass-card">
-                        <div class="project-image">
-                            <div class="project-placeholder">
-                                <i class="fas fa-shopping-cart"></i>
-                                <span>Coming Soon</span>
-                            </div>
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="#" class="project-link">
-                                        <i class="fas fa-external-link-alt"></i>
-                                    </a>
-                                    <a href="#" class="project-link">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">E-commerce Site</h3>
-                            <p class="project-description">
-                                Full-featured online store with payment integration, 
-                                user accounts, and admin dashboard.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">Express</span>
-                                <span class="tech-tag">Stripe</span>
-                            </div>
-                        </div>
+                    <div class="project-navigation">
+                        <button class="project-nav-btn active" data-project="0"></button>
+                        <button class="project-nav-btn" data-project="1"></button>
+                        <button class="project-nav-btn" data-project="2"></button>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="contact">
-            <div class="container">
+        <section id="contact" class="section">
+            <div class="section-container">
                 <div class="section-header">
-                    <span class="section-number">04</span>
-                    <h2 class="section-title">Let's Connect</h2>
+                    <h2 class="section-title">Get In Touch</h2>
                     <div class="title-underline"></div>
                 </div>
                 
-                <div class="contact-content">
+                <div class="contact-layout">
                     <div class="contact-info">
-                        <h3>Ready to start a project?</h3>
-                        <p>
-                            I'm always interested in new opportunities and exciting projects. 
-                            Whether you have a question or just want to say hi, I'll do my best to get back to you!
-                        </p>
+                        <h3>Let's work together!</h3>
+                        <p>I'm always interested in new opportunities and exciting projects. Drop me a message!</p>
                         
                         <div class="contact-methods">
                             <div class="contact-method">
-                                <i class="fas fa-envelope"></i>
-                                <div>
+                                <div class="method-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="method-info">
                                     <h4>Email</h4>
                                     <a href="mailto:your-email@example.com">your-email@example.com</a>
                                 </div>
                             </div>
                             <div class="contact-method">
-                                <i class="fab fa-linkedin"></i>
-                                <div>
-                                    <h4>LinkedIn</h4>
-                                    <a href="#" target="_blank">linkedin.com/in/charlieold</a>
+                                <div class="method-icon">
+                                    <i class="fab fa-github"></i>
                                 </div>
-                            </div>
-                            <div class="contact-method">
-                                <i class="fab fa-github"></i>
-                                <div>
+                                <div class="method-info">
                                     <h4>GitHub</h4>
                                     <a href="https://github.com/cold-17" target="_blank">github.com/cold-17</a>
                                 </div>
@@ -438,25 +396,20 @@
                         </div>
                     </div>
                     
-                    <div class="contact-form">
-                        <form class="form">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" name="name" required>
+                    <div class="contact-form-container">
+                        <form class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required>
+                                <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
                             </div>
-                            <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <input type="text" id="subject" name="subject" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">
+                            <button type="submit" class="btn btn-primary form-submit">
                                 <span>Send Message</span>
                                 <i class="fas fa-paper-plane"></i>
                             </button>
@@ -469,18 +422,12 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <p>&copy; 2024 Charlie Old. Built with passion and lots of coffee ☕</p>
-                </div>
-                <div class="footer-right">
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
+        <div class="footer-content">
+            <p>&copy; 2024 Charlie Old. Built with passion and lots of coffee ☕</p>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
     </footer>
